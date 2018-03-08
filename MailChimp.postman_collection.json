@@ -1,0 +1,231 @@
+{
+	"info": {
+		"name": "MailChimp",
+		"_postman_id": "ceb84496-7763-4c28-ba0c-95977fc7d629",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/lists/13f88b4cde",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/lists/3492830fef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"3492830fef"
+					]
+				},
+				"description": "Get list by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test3\",\n  \"contact\": {\n    \"company\": \"MailChimp\",\n    \"address1\": \"675 Ponce De Leon Ave NE\",\n    \"address2\": \"Suite 5000\",\n    \"city\": \"Atlanta\",\n    \"state\": \"GA\",\n    \"zip\": \"30308\",\n    \"country\": \"US\",\n    \"phone\": \"\"\n  },\n  \"permission_reminder\": \"hi\",\n  \"use_archive_bar\" : true,\n  \"campaign_defaults\" : {\n\t\"from_name\" : \"sumit\",\n\t\"from_email\": \"sumit.dabas01@gmail.com\",\n\t\"subject\": \"\",\n\t\"language\" : \"en\"\n\t},\n\t\"email_type_option\" : false\n}  "
+				},
+				"url": {
+					"raw": "http://localhost:8000/lists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists"
+					]
+				},
+				"description": "Create a list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/3492830fef",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test3\",\n  \"contact\": {\n    \"company\": \"changed\",\n    \"address1\": \"675 Ponce De Leon Ave NE\",\n    \"address2\": \"Suite 5000\",\n    \"city\": \"Atlanta\",\n    \"state\": \"GA\",\n    \"zip\": \"30308\",\n    \"country\": \"US\",\n    \"phone\": \"\"\n  },\n  \"permission_reminder\": \"hi\",\n  \"use_archive_bar\" : true,\n  \"campaign_defaults\" : {\n\t\"from_name\" : \"sumit\",\n\t\"from_email\": \"sumit.dabas01@gmail.com\",\n\t\"subject\": \"\",\n\t\"language\" : \"en\"\n\t},\n\t\"email_type_option\" : false\n}  "
+				},
+				"url": {
+					"raw": "http://localhost:8000/lists/3492830fef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"3492830fef"
+					]
+				},
+				"description": "Update a list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/3492830fef",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"test1\",\n  \"contact\": {\n    \"company\": \"MailChimp\",\n    \"address1\": \"675 Ponce De Leon Ave NE\",\n    \"address2\": \"Suite 5000\",\n    \"city\": \"Atlanta\",\n    \"state\": \"GA\",\n    \"zip\": \"30308\",\n    \"country\": \"US\",\n    \"phone\": \"\"\n  },\n  \"permission_reminder\": \"hi\",\n  \"use_archive_bar\" : true,\n  \"campaign_defaults\" : {\n\t\"from_name\" : \"sumit\",\n\t\"from_email\": \"sumit.dabas01@gmail.com\",\n\t\"subject\": \"\",\n\t\"language\" : \"en\"\n\t},\n\t\"email_type_option\" : false\n}  "
+				},
+				"url": {
+					"raw": "http://localhost:8000/lists/3492830fef",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"3492830fef"
+					]
+				},
+				"description": "Delete list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/f16c07868f/members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/lists/f16c07868f/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"f16c07868f",
+						"members"
+					]
+				},
+				"description": "Get members of this list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/f16c07868f/members",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email_address\": \"test3@gmail.com\",\n  \"status\": \"subscribed\"\n}  "
+				},
+				"url": {
+					"raw": "http://localhost:8000/lists/f16c07868f/members",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"f16c07868f",
+						"members"
+					]
+				},
+				"description": "Add members to list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/f16c07868f/members/19f84906f4412abf6066aaa92fe9d6c1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email_address\": \"test3.1@gmail.com\",\n  \"status\": \"subscribed\"\n}  "
+				},
+				"url": {
+					"raw": "http://localhost:8000/lists/f16c07868f/members/19f84906f4412abf6066aaa92fe9d6c1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"f16c07868f",
+						"members",
+						"19f84906f4412abf6066aaa92fe9d6c1"
+					]
+				},
+				"description": "Update member in this list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/lists/ef56d52296/members/3c4f419e8cd958690d0d14b3b89380d3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8000/lists/ef56d52296/members/3c4f419e8cd958690d0d14b3b89380d3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lists",
+						"ef56d52296",
+						"members",
+						"3c4f419e8cd958690d0d14b3b89380d3"
+					]
+				},
+				"description": "Delete member of this list"
+			},
+			"response": []
+		}
+	]
+}
